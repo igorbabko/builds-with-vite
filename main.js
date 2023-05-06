@@ -1,8 +1,10 @@
-// import './style.css'
+import { heading } from './style.module.css'
 // import './src/a'
 
+console.log(heading)
+
 document.body.addEventListener('click', () => {
-  import('./src/a').then((a) => console.log(a))
+  document.querySelector('h1').classList = heading;
 })
 
 // console.log(styles);

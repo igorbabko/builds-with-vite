@@ -1,5 +1,9 @@
-body {
+.heading {
   font-size: responsive;
   background: indigo;
   color: white;
+}
+
+.subheading {
+  color: green;
 }
