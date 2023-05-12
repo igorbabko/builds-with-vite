@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import Inspect from 'vite-plugin-inspect'
 
 import path from 'path'
 
@@ -17,4 +18,5 @@ export default defineConfig({
     // jsxInject: `import './mod.js'`,
     // loader: { '.js': 'jsx' },
   },
+  plugins: [Inspect()],
 })
