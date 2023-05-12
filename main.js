@@ -1,12 +1,8 @@
-import './src/assets/style.css'
-// import './src/a'
+import styles from './src/assets/style.module.css'
+import styles2 from './src/assets/style2.module.css'
 
+console.log(styles)
+console.log(styles2)
 
-// console.log(styles);
-// import javascriptLogo from './javascript.svg'
-// import viteLogo from '/vite.svg'
-// import { setupCounter } from './counter.js'
-// import collect from 'collect.js'
-// import { template } from './test.jsx'
-
-// document.querySelector('#app').appendChild(template)
+document.querySelector('#app').classList = styles.wrapper
+document.querySelector('#app2').classList = styles2.wrapper
