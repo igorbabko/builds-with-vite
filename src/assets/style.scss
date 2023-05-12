@@ -1,0 +1,7 @@
+$color: indigo;
+
+.wrapper {
+  & p {
+    color: $color;
+  }
+}
