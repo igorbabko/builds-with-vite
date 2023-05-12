@@ -1,0 +1,5 @@
+.wrapper {
+  & p {
+    color: pink;
+  }
+}

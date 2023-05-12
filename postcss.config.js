@@ -1,5 +1,5 @@
-import a from 'postcss-responsive-type'
+import postcssNesting from 'postcss-nesting'
 
 export default {
-  plugins: [a],
+  plugins: [postcssNesting],
 }

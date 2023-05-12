@@ -1,11 +1,6 @@
-import { heading } from './style.module.css'
+import './src/assets/style.css'
 // import './src/a'
 
-console.log(heading)
-
-document.body.addEventListener('click', () => {
-  document.querySelector('h1').classList = heading;
-})
 
 // console.log(styles);
 // import javascriptLogo from './javascript.svg'
