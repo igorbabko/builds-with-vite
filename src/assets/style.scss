@@ -3,5 +3,9 @@ $color: indigo;
 .wrapper {
   & p {
     color: $color;
+    height: 200px;
+    background: url(img/javascript.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
