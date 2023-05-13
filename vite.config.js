@@ -1,22 +1,19 @@
 import { defineConfig } from 'vite'
 import Inspect from 'vite-plugin-inspect'
+import checker from 'vite-plugin-checker'
 
 import path from 'path'
 
 export default defineConfig({
-  // build: {
-  //   cssCodeSplit: false,
-  // },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/assets'),
     },
   },
-  esbuild: {
-    jsxFactory: 'create',
-    jsxFragment: 'frag',
-    // jsxInject: `import './mod.js'`,
-    // loader: { '.js': 'jsx' },
-  },
-  plugins: [Inspect()],
+  plugins: [
+    Inspect(),
+    checker({
+      typescript: true,
+    }),
+  ],
 })
