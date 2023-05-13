@@ -14,6 +14,9 @@ export default defineConfig({
     Inspect(),
     checker({
       typescript: true,
+      eslint: {
+        lintCommand: 'eslint "./*.ts"',
+      },
     }),
   ],
 })
