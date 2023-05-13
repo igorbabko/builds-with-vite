@@ -1,3 +1,1 @@
-console.log('module c');
-
-export default 'module c'
+console.log('module c')
