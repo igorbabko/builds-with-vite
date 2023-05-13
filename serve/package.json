@@ -1,0 +1,13 @@
+{
+  "name": "serve",
+  "type": "module",
+  "scripts": {
+    "serve": "serve"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "dependencies": {
+    "collect.js": "^4.36.1"
+  }
+}
