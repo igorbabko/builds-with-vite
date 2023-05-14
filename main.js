@@ -1,3 +1,5 @@
-import { name, age } from './src/assets/07.json'
+import imageUrl from './src/assets/img/javascript.svg'
 
-console.log(name, age)
+console.log(imageUrl)
+
+document.getElementById('image').src = imageUrl
