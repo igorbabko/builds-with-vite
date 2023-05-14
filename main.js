@@ -1,5 +1,11 @@
-import imageUrl from './src/assets/img/javascript.svg'
+const modules = import.meta.glob('./src/10/*.js', { eager: true })
 
-console.log(imageUrl)
+console.log(modules)
 
-document.getElementById('image').src = imageUrl
+// document.addEventListener('click', () => {
+//   Object.values(modules).forEach((module) => {
+//     module().then((data) => {
+//       console.log(data)
+//     })
+//   })
+// })
