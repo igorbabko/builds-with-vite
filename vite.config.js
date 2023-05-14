@@ -1,4 +1,5 @@
 import Inspect from 'vite-plugin-inspect'
+import checker from 'vite-plugin-checker'
 
 export default {
   esbuild: {
@@ -6,6 +7,9 @@ export default {
     jsxInject: 'import { create } from "/src/12-create.js"'
   },
   plugins: [
-    Inspect()
+    Inspect(),
+    checker({
+      typescript: true,
+    }),
   ],
 }
