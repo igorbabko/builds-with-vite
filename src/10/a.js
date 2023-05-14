@@ -1,3 +1,5 @@
 console.log('module a')
 
-export default 2
+export const name = 'Jane'
+
+export default 'a'
