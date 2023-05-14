@@ -1,5 +1,3 @@
-import styles from './src/assets/06.module.sass'
+import { name, age } from './src/assets/07.json'
 
-console.log(styles)
-
-document.body.className = styles.wrapper
+console.log(name, age)
