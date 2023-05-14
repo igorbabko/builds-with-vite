@@ -1,3 +1,4 @@
-import { template } from './src/12.jsx'
+import '@/03.css'
+import imageUrl from '@/img/javascript.svg'
 
-document.querySelector('#app').appendChild(template)
+document.querySelector('#image').src = imageUrl
