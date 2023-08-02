@@ -1,3 +1,4 @@
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import Inspect from 'vite-plugin-inspect'
 import checker from 'vite-plugin-checker'
 import path from 'path'
@@ -15,6 +16,11 @@ export default {
         lintCommand: 'eslint "./**/*.{ts,tsx}"',
       },
     }),
+    ViteImageOptimizer({
+      jpg: {
+        quality: 80,
+      },
+    })
   ],
   resolve: {
     alias: {

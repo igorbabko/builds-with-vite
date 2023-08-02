@@ -1,1 +1,3 @@
-console.log(import.meta.env)
+import image from './src/assets/img/image.jpg'
+
+document.querySelector('img').src = image
