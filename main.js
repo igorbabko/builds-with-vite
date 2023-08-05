@@ -1,3 +1,3 @@
-import image from './src/assets/img/image.jpg'
+import products from './src/assets/products.csv'
 
-document.querySelector('img').src = image
+document.querySelector('pre').textContent = JSON.stringify(products)
