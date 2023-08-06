@@ -9,7 +9,7 @@ export default () => {
     apply(config, { command, mode }) {
       // console.log(config)
 
-      return mode === 'development'
+      return true // mode === 'development'
     },
     configResolved(resolvedConfig) {
       config = resolvedConfig
