@@ -27,10 +27,28 @@ export default () => {
           code: `export default ${JSON.stringify(records)}`
         }
       }
-    }
+    },
     // transformIndexHtml(html) {
     //   console.log('--------------------------------------');
     //   return html.replace(/<\/body>/, `<script>alert('aa')</script><\/body>`)
     // },
+    // configureServer(server) {
+    async handleHotUpdate(context) {
+      // console.log(context.modules[0].url)
+
+      if (/\.csv$/.test(context.file)) {
+        context.server.ws.send({
+          type: 'custom',
+          event: 'csv-update',
+          // data: await context.read()
+          data: {
+            url: context.modules[0].url,
+            data: parse(await context.read(), { columns: true })
+          }
+        })
+
+        return []
+      }
+    }
   }
 }
