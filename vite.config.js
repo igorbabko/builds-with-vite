@@ -10,13 +10,28 @@ export default {
     strictPort: true,
     open: true, // '/api/products',
     headers: {
-      'a': 'b'
+      a: 'b'
     },
     proxy: {
       // string shorthand: http://localhost:5173/foo -> http://localhost:4567/foo
       // '/products': 'https://dummyjson.com',
 
       // with options: http://localhost:5173/api/bar-> http://jsonplaceholder.typicode.com/bar
+      '/api': {
+        target: 'https://dummyjson.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
+    }
+  },
+  preview: {
+    port: '3000',
+    strictPort: false,
+    open: true,
+    headers: {
+      a: 'b'
+    },
+    proxy: {
       '/api': {
         target: 'https://dummyjson.com',
         changeOrigin: true,
