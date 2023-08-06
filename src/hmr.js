@@ -1,6 +1,22 @@
-export const message = 'hello worl'
+export const title = 'hello world'
 
 export default 'default message'
+
+let styles
+
+function addStylesheet() {
+  styles = document.createElement('style')
+
+  styles.innerHTML = 'body { background: indigo; color: white }'
+
+  document.head.appendChild(styles)
+}
+
+function removeStylesheet() {
+  styles.remove()
+}
+
+addStylesheet()
 
 if (import.meta.hot) {
   import.meta.hot.accept((updatedModule) => {
@@ -10,6 +26,11 @@ if (import.meta.hot) {
       console.log(updatedModule)
       // console.log(updatedModule.message)
     }
+  })
+
+  import.meta.hot.dispose(() => {
+    // cleanup side effect
+    removeStylesheet()
   })
 
   import.meta.hot.on('vite:beforeUpdate', (b) => {
