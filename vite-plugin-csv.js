@@ -32,18 +32,6 @@ export default () => {
     //   console.log('--------------------------------------');
     //   return html.replace(/<\/body>/, `<script>alert('aa')</script><\/body>`)
     // },
-    configureServer(server) {
-      // Example: wait for a client to connect before sending a message
-      server.ws.on('connection', () => {
-        server.ws.send('connected', 'Connection established')
-      })
-
-      server.ws.on('ping', (message, client) => {
-        console.log(message)
-
-        client.send('pong', 'Hello client!')
-      })
-    },
     async handleHotUpdate(context) {
       // console.log(context.modules[0].url)
 
