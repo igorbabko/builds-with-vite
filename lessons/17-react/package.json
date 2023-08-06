@@ -10,7 +10,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.4",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vite-plugin-inspect": "^0.7.35"
   },
   "dependencies": {
     "react": "^18.2.0",
