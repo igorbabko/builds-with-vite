@@ -1,5 +1,8 @@
 import Inspect from 'vite-plugin-inspect'
 
 export default {
-  plugins: [Inspect()]
+  plugins: [Inspect()],
+  build: {
+    cssCodeSplit: false
+  }
 }
