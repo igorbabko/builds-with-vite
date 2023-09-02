@@ -1,8 +1,17 @@
 {
-  "name": "18-library-mode",
+  "name": "pluck",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/pluck.umd.cjs",
+  "module": "./dist/pluck.js",
+  "exports": {
+    ".": {
+      "import": "./dist/pluck.js",
+      "require": "./dist/pluck.umd.cjs"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
