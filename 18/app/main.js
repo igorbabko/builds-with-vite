@@ -1,4 +1,4 @@
-import { pluck } from 'pluck'
+import { pluckAndLog } from 'pluck'
 import { log } from 'pluck/log'
 
 const users = [
@@ -16,4 +16,4 @@ const users = [
   }
 ]
 
-log(pluck(users, 'name'))
+pluckAndLog(users, 'name')

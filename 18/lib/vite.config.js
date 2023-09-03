@@ -15,6 +15,9 @@ export default {
 
         return `${name}.${format}`
       }
+    },
+    rollupOptions: {
+      external: ['collect.js']
     }
   }
 }
