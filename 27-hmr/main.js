@@ -1,23 +1,25 @@
-import products from './products.csv'
+import './module'
 
-document.querySelector('pre').textContent = JSON.stringify(products)
+// import products from './products.csv'
 
-if (import.meta.hot) {
-  console.log('hot')
+// document.querySelector('pre').textContent = JSON.stringify(products)
 
-  import.meta.hot.on('connected', (message) => {
-    console.log(message)
+// if (import.meta.hot) {
+  // console.log('hot')
 
-    import.meta.hot.send('ping', 'Hello server!')
-  })
+  // import.meta.hot.on('connected', (message) => {
+  //   console.log(message)
 
-  import.meta.hot.on('pong', (message) => {
-    console.log(message)
-  })
+  //   import.meta.hot.send('ping', 'Hello server!')
+  // })
 
-  import.meta.hot.on('csv-update', ({ url, data }) => {
-    console.log(`[vite] hot updated: ${url}`)
+  // import.meta.hot.on('pong', (message) => {
+  //   console.log(message)
+  // })
 
-    document.querySelector('pre').textContent = JSON.stringify(data)
-  })
-}
+//   import.meta.hot.on('csv-update', ({ url, data }) => {
+//     console.log(`[vite] hot updated: ${url}`)
+
+//     document.querySelector('pre').textContent = JSON.stringify(data)
+//   })
+// }

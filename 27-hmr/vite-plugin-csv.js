@@ -19,17 +19,17 @@ export default () => {
         }
       }
     },
-    configureServer(server) {
-      server.ws.on('connection', () => {
-        server.ws.send('connected', 'Connection established')
-      })
+    // configureServer(server) {
+    //   server.ws.on('connection', () => {
+    //     server.ws.send('connected', 'Connection established')
+    //   })
 
-      server.ws.on('ping', (message, client) => {
-        console.log(message)
+    //   server.ws.on('ping', (message, client) => {
+    //     console.log(message)
 
-        client.send('pong', 'Hello client!')
-      })
-    },
+    //     client.send('pong', 'Hello client!')
+    //   })
+    // },
     async handleHotUpdate(context) {
       if (/\.csv$/.test(context.file)) {
         context.server.ws.send({
