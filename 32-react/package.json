@@ -1,0 +1,20 @@
+{
+  "name": "32-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5",
+    "vite-plugin-inspect": "^0.7.38"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
